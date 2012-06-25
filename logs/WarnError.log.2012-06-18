@@ -1,0 +1,36 @@
+10:48:00.554 WARN  com.dukascopy.api.impl.connect.DCClientImpl - Types list was not found
+10:48:04.143 WARN  com.dukascopy.api.impl.connect.AuthorizationClient - << [{}]{news.host.url=https://external.dukascopy.com, jss.logserver.url=https://demo-login.dukascopy.com/jss-log/, userTypes=MINI_FX,MANAGE_STOP_LIMIT,REGULAR,, wlabel.logo=[B@6548f8c8, news.source=api, contest.chart.url=https://demo-login.dukascopy.com/aDDS/export/contestChart.php, menu.item.dayly.hl=/marketwatch/daily_hl_interbank/, menu.item.margin.level.calculator=/marketwatch/forexcalc/margin_level/, wlabel.shortLabel=Dukascopy Bank, encryptionKey=495F519A0C2FE2EF898D51136762FBEB, reports.url=/Reports, base.calendar.url=http://www.dukascopy.com/swiss/{0}, menu.item.economic.calendar=/marketwatch/calendars/eccalendar/, additionalUserTypes=[], feed.commission.history=[], brokerChat.url=https://www.dukascopy.com/chat/login.php?channel=3, wlabel.url=http://www.dukascopy.com, platformFaq.url=http://www.dukascopy.com/swiss/english/forex/faq/, menu.item.holidays.calendar=/marketwatch/calendars/NationalHolidaysCalendar/, menu.item.report.issue=/about/issues/, reports=portfolio_client,intraday_client,position_client,annual_report,deposit_receipt,trader_sll,self_traded_volume,activity_log,merge_log,trade_log,trader_sll_action_log, tradelog_sfx.url=/aDDS/export/tradeLog.php, platformManual.url=http://www.dukascopy.com/wiki/, instruments=[CAD/HKD, EUR/SGD, EUR/NOK, EUR/NZD, AUD/NZD, USD/TRY, GBP/USD, NZD/CHF, USD/MXN, USD/HKD, SGD/JPY, EUR/HKD, AUD/CAD, USD/PLN, EUR/PLN, USD/NOK, USD/CHF, GBP/CHF, EUR/CHF, USD/JPY, GBP/CAD, HKD/JPY, GBP/JPY, EUR/CAD, USD/SEK, CHF/SGD, USD/DKK, EUR/SEK, NZD/JPY, AUD/SGD, NZD/USD, CAD/JPY, EUR/GBP, CHF/JPY, XAG/USD, GBP/AUD, AUD/JPY, XAU/USD, EUR/USD, AUD/USD, USD/CAD, USD/ZAR, EUR/JPY, USD/SGD, AUD/CHF, GBP/NZD, USD/RUB, NZD/CAD, CAD/CHF, EUR/AUD, EUR/DKK, EUR/TRY], menu.item.forex.calculator=/marketwatch/forexcalc/forex_calculator/, debug=false, client.mode=DEMO, loginId=382684, get.help.url=http://www.dukascopy.com/swiss/english/forex/jforex/forum/, menu.item.interest.rates.calendar=/marketwatch/calendars/InterestRatesCalendar/, wlabel.foUrl=https://demo-login.dukascopy.com, history.server.url=http://www.dukascopy.com/datafeed/, external_ip=128.237.240.169, wlabel.longLabel=Dukascopy Bank SA, services1.url=https://demo-login.dukascopy.com, wlabel.skype=dukascopy, wlabel.phone=+41 (0) 22 799 4888}
+17:38:39.466 ERROR com.dukascopy.transport.client.ClientConnector - Exception caught
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:21)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:198)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:171)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:245)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.read(SocketIoProcessor.java:218)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.process(SocketIoProcessor.java:198)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.access$400(SocketIoProcessor.java:45)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor$Worker.run(SocketIoProcessor.java:485)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:680)
+17:38:40.474 WARN  singlejartest.Main - Disconnected
+17:38:41.816 WARN  singlejartest.Main - Disconnected
+17:38:43.145 WARN  singlejartest.Main - Disconnected
+17:38:43.291 ERROR com.dukascopy.transport.client.TransportClient - Error send synch request
+java.util.concurrent.TimeoutException: No response from server. Request: {"reqid":"11","type":"hb"}
+	at com.dukascopy.transport.client.TransportClient.controlSynchRequest(TransportClient.java:836)
+	at com.dukascopy.transport.client.TransportClient.pingIoSession(TransportClient.java:631)
+	at com.dukascopy.transport.client.TransportClient.pingConnection(TransportClient.java:662)
+	at com.dukascopy.transport.client.TransportClient.access$200(TransportClient.java:37)
+	at com.dukascopy.transport.client.TransportClient$4.run(TransportClient.java:358)
+	at java.lang.Thread.run(Thread.java:680)
+17:38:43.292 ERROR com.dukascopy.transport.client.TransportClient - Client disconnected, secondary connection ping failed
+java.util.concurrent.TimeoutException: No response from server. Request: {"reqid":"11","type":"hb"}
+	at com.dukascopy.transport.client.TransportClient.controlSynchRequest(TransportClient.java:857)
+	at com.dukascopy.transport.client.TransportClient.pingIoSession(TransportClient.java:631)
+	at com.dukascopy.transport.client.TransportClient.pingConnection(TransportClient.java:662)
+	at com.dukascopy.transport.client.TransportClient.access$200(TransportClient.java:37)
+	at com.dukascopy.transport.client.TransportClient$4.run(TransportClient.java:358)
+	at java.lang.Thread.run(Thread.java:680)
+17:38:44.470 WARN  singlejartest.Main - Disconnected
+17:38:58.463 WARN  com.dukascopy.api.impl.connect.AuthorizationClient - << [{}]{news.host.url=https://external.dukascopy.com, jss.logserver.url=https://demo-login.dukascopy.com/jss-log/, userTypes=MINI_FX,MANAGE_STOP_LIMIT,REGULAR,, wlabel.logo=[B@40537935, news.source=api, contest.chart.url=https://demo-login.dukascopy.com/aDDS/export/contestChart.php, menu.item.dayly.hl=/marketwatch/daily_hl_interbank/, menu.item.margin.level.calculator=/marketwatch/forexcalc/margin_level/, wlabel.shortLabel=Dukascopy Bank, encryptionKey=495F519A0C2FE2EF898D51136762FBEB, reports.url=/Reports, base.calendar.url=http://www.dukascopy.com/swiss/{0}, menu.item.economic.calendar=/marketwatch/calendars/eccalendar/, additionalUserTypes=[], feed.commission.history=[], brokerChat.url=https://www.dukascopy.com/chat/login.php?channel=3, wlabel.url=http://www.dukascopy.com, platformFaq.url=http://www.dukascopy.com/swiss/english/forex/faq/, menu.item.holidays.calendar=/marketwatch/calendars/NationalHolidaysCalendar/, menu.item.report.issue=/about/issues/, reports=portfolio_client,intraday_client,position_client,annual_report,deposit_receipt,trader_sll,self_traded_volume,activity_log,merge_log,trade_log,trader_sll_action_log, tradelog_sfx.url=/aDDS/export/tradeLog.php, platformManual.url=http://www.dukascopy.com/wiki/, instruments=[CAD/HKD, EUR/SGD, EUR/NOK, EUR/NZD, AUD/NZD, USD/TRY, GBP/USD, NZD/CHF, USD/MXN, USD/HKD, SGD/JPY, EUR/HKD, AUD/CAD, USD/PLN, EUR/PLN, USD/NOK, USD/CHF, GBP/CHF, EUR/CHF, USD/JPY, GBP/CAD, HKD/JPY, GBP/JPY, EUR/CAD, USD/SEK, CHF/SGD, USD/DKK, EUR/SEK, NZD/JPY, AUD/SGD, NZD/USD, CAD/JPY, EUR/GBP, CHF/JPY, XAG/USD, GBP/AUD, AUD/JPY, XAU/USD, EUR/USD, AUD/USD, USD/CAD, USD/ZAR, EUR/JPY, USD/SGD, AUD/CHF, GBP/NZD, USD/RUB, NZD/CAD, CAD/CHF, EUR/AUD, EUR/DKK, EUR/TRY], menu.item.forex.calculator=/marketwatch/forexcalc/forex_calculator/, debug=false, client.mode=DEMO, loginId=382684, get.help.url=http://www.dukascopy.com/swiss/english/forex/jforex/forum/, menu.item.interest.rates.calendar=/marketwatch/calendars/InterestRatesCalendar/, wlabel.foUrl=https://demo-login.dukascopy.com, history.server.url=http://www.dukascopy.com/datafeed/, external_ip=128.237.240.169, wlabel.longLabel=Dukascopy Bank SA, services1.url=https://demo-login.dukascopy.com, wlabel.skype=dukascopy, wlabel.phone=+41 (0) 22 799 4888}
